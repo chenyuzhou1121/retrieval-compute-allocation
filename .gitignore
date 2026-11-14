@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+.cache/
+.DS_Store
+user_data/
+outputs/
+*.json
+!example_config.json
+*.jsonl
+*.csv
+*.log
+*.pt
+*.bin
+*.safetensors
+.env
+.env.*

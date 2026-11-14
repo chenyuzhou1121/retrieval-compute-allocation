@@ -1,0 +1,8 @@
+{
+  "inputs": ["/path/to/task.json"],
+  "output": "outputs/grid.csv",
+  "utilities": "outputs/utilities.json",
+  "log_file": "outputs/evaluate.log",
+  "device": "cuda:0",
+  "batch_size": 32
+}
