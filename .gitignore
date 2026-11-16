@@ -9,6 +9,7 @@ outputs/
 !example_config.json
 *.jsonl
 *.csv
+!results/grid.csv
 *.log
 *.pt
 *.bin

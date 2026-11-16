@@ -44,6 +44,8 @@ Alternatively, pass task paths directly: `python3 evaluate_grid.py task.json ano
 
 Allocation prints JSON containing task assignments, uniform and task-oracle utilities (`V_U`, `V_T`), mean cost, the task-independent mixture envelope, percentage-point margins, and the cheapest assignment matching uniform quality. Tasks have equal weight; the CSV `n` column records query counts and does not weight allocation. `--budget` caps every action, not just mean cost. `--menu four` includes `dense`, `large`, `dense_rerank`, and `large_rerank`; `eight` includes all actions.
 
+`results/grid.csv` contains the paper's nine-task, eight-action grid of task-mean R@10 values. K12 appears only as aggregate values. `python3 allocation.py --grid results/grid.csv --budget 10 --menu four` reproduces the four-action allocation at B=10.
+
 Action names combine a pool name with the suffix below. Costs in `allocation.py` are normalized experimental prices with dense retrieval as one unit.
 
 | Suffix | Qwen3 reranker size | Dense cost | Large cost |
@@ -94,6 +96,7 @@ gci.py              Gated concept injection into LLM reranking
 matched_labels.py   Shared-label task and query selector comparison
 metrics.py          Recall helpers
 reranker.py         Batched Qwen yes/no scoring
+results/grid.csv    Nine-task, eight-action R@10 grid from the paper
 example_config.json Evaluation configuration template
 requirements.txt    Python dependency declarations
 .gitignore          Generated data, outputs, caches, and local settings
